@@ -1,0 +1,29 @@
+---
+const { item } = Astro.props;
+// console.log(item);
+---
+
+<div>
+  <a
+    href={item.url}
+    class="text-sm font-semibold leading-6 text-gray-900"
+  >
+    {item.name}
+  </a>
+  {
+    item.hasChildren && (
+      <ul class="hidden w-48 mt-2 shadow-md px-4 py-2 border-primary">
+        {item.children.map((item:any) => (
+          <li
+
+            class="py-1 hover:text-cyan-600 hover:font-medium"
+          >
+            <a href={item.href}>
+              <a class="text-xs">{item.name}</a>
+            </a>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+</div>
