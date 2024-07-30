@@ -4,14 +4,7 @@
       "name": "aetna",
       "logo": "aetna"
     },
-    {
-      "name": "BlueCross BlueSheld",
-      "logo": "bluecross"
-    },
-    {
-      "name": "Blue Cross of Idaho",
-      "logo": "bluecrossidaho"
-    },
+
     {
       "name": "Medic Aid",
       "logo": "medicaid"
@@ -24,14 +17,7 @@
       "name": "Pacific Source Health Plans",
       "logo": "pacificsource"
     },
-    {
-      "name": "Regence",
-      "logo": "regence"
-    },
-    {
-      "name": "Select Health",
-      "logo": "selecthealth"
-    },
+
     {
       "name": "St. Luke's Health Partners",
       "logo": "stlukes"
@@ -40,9 +26,24 @@
       "name": "Tricare",
       "logo": "tricare"
     },
+
     {
       "name": "United Health Care",
       "logo": "unitedhealthcare"
+    }
+  ],
+  "removedList": [
+    {
+      "name": "BlueCross BlueSheld",
+      "logo": "bluecross"
+    },
+    {
+      "name": "Regence",
+      "logo": "regence"
+    },
+    {
+      "name": "Blue Cross of Idaho",
+      "logo": "bcrossidaho"
     }
   ]
 }

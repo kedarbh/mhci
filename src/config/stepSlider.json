@@ -1,0 +1,19 @@
+{
+  "slider": [
+    {
+      "step": "Step 1",
+      "title": "Get Your Appointment",
+      "description": "Contact us online by clicking Schedule Appointment or call our office. No referral is needed. Tele-visit is available. You can also schedule a FREE 10 minute consultation with the provider if you happen to be on the fence."
+    },
+    {
+      "step": "Step 2",
+      "title": "Make your Visit",
+      "description": "Schedule an initial visit ~ 45 to 60 minutes. During this visit, we get to know each other and develop a plan."
+    },
+    {
+      "step": "Step 3",
+      "title": "Follow Ups",
+      "description": "Follow-up visits ~ 30 minutes. We will monitor and modify the plan as needed based on your response. The frequency of follow-up visits can range from every week to every three months, depending on the phase of care and the nature of the medication involved."
+    }
+  ]
+}
