@@ -59,5 +59,25 @@
       "name": "Blog",
       "ulr": "/blog"
     }
+  ],
+  "footerLinks": [
+    {
+      "name": "Privacy",
+      "url": "/your-privacy"
+    },
+    {
+      "name": "Terms and Conditions",
+      "url": "/our-terms"
+    },
+    {
+      "name": "Contact Us",
+      "url": "/contact-us"
+    }
+  ],
+  "notIncluded": [
+    {
+      "name": "Accessibility",
+      "url": "/accessibility-statement"
+    }
   ]
 }

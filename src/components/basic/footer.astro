@@ -1,0 +1,62 @@
+---
+import { footerLinks } from "@config/menu.json";
+import Logo from "./Logo.astro";
+import psychologyToday from "@assets/images/psychology-today.webp";
+import { Image } from "astro:assets";
+
+export interface FooterMenu {
+  name: string;
+  url: string;
+}
+
+const footerNav: FooterMenu[] = footerLinks;
+---
+
+<footer class="bg-sky-50 pt-10 text-gray-800">
+  <div
+    class="flex justify-between flex-wrap gap-2 lg:max-w-screen-xl px-6 container mx-auto"
+  >
+    <div>
+      <Logo />
+      <div class="space-y-1">
+        <p>Phone (Appointments): 208-506-3618</p>
+        <p>FAX: 208-254-7739</p>
+        <p>Address: 3919 East Overland Road, Meridian, ID 83642</p>
+      </div>
+    </div>
+    <div>
+      <div class="flex space-x-2 flex-wrap divide-x divide-gray-200 pt-2">
+        {
+          footerNav.map((item: any) => (
+            <a
+              href={item.url}
+              class="text-sm uppercase font-medium [&:not(:first-child)]:pl-2 "
+            >
+              {item.name}
+            </a>
+          ))
+        }
+      </div>
+      <div>
+        <Image
+          src={psychologyToday}
+          alt="verified by psychology today"
+          class="h-20 w-auto mt-5"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="mt-5 bg-sky-100">
+    <div
+      class="flex flex-wrap justify-between lg:max-w-screen-xl mx-auto py-5 text-center px-6"
+    >
+      <p class="text-sm">
+        &copy;{new Date().getFullYear()} Mental Health Clinic of Idaho. All Rights
+        Reserved.
+      </p>
+      <p class="text-sm capitalize">
+        If you're in crisis and need immediate help, Please call 911.
+      </p>
+    </div>
+  </div>
+</footer>
