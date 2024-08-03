@@ -16,7 +16,7 @@ export interface NavigationLink {
   children?: ChildNavigationLink[];
 }
 
-const { main }: { main: NavigationLink[] } = menu;
+const main: any = menu;
 
 const { pathname } = Astro.url;
 ---
@@ -82,7 +82,7 @@ const { pathname } = Astro.url;
       </div>
 
       <div class="hidden lg:flex lg:gap-x-12">
-        {main.map((item) => <Navchild {item} />)}
+        {main.map((item: any) => <Navchild {item} />)}
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <a
