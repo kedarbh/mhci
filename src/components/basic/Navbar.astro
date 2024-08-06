@@ -24,42 +24,37 @@ const { main }: any = menu;
 <header class="top-0 z-50">
   <div class="border-b border-blue-50/50">
     <div
-      class="container max-w-6xl mx-auto flex justify-between items-center content-center my-3"
+      class="container max-w-screen-xl px-4 md:px-24 lg:px-8 mx-auto flex justify-between items-center content-center my-3"
     >
       <div class="flex lg:flex-1">
         <a href="/">
           <Logo />
         </a>
       </div>
+
       <div class="flex space-x-12">
-        <div class="flex space-x-2 items-center">
+        <div class="hidden lg:flex space-x-2 items-center">
           <Icon name="call" class="h-8 w-8 text-sky-500" />
           <div>
             <p class="text-sm font-thin">Call for an appointment</p>
             <p>208-506-3618</p>
           </div>
         </div>
-        <div class="flex space-x-2 items-center">
+        <div class="hidden lg:flex space-x-2 items-center">
           <Icon name="appointment-1" class="h-8 w-8 text-sky-500" />
           <div>
             <p class="text-sm font-thin">Make an <br />Appointment Online</p>
           </div>
         </div>
-        <div class="flex space-x-2 items-center">
+        <div class="space-x-2 items-center hidden lg:flex">
           <Icon name="patient-portal" class="h-8 w-8 text-sky-500" />
           <div>
             <p class="text-sm font-thin">Patient <br />Portal</p>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="py-2 shadow-sm divide-x-2 divide-blue-900">
-    <nav
-      class="flex items-center justify-between container mx-auto max-w-6xl"
-      aria-label="Global"
-    >
-      <div class="flex lg:hidden">
+      <!-- mobile nav menu -->
+      <div id="mobile-nav-button" class="flex lg:hidden">
         <button
           type="button"
           class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -80,7 +75,107 @@ const { main }: any = menu;
           </svg>
         </button>
       </div>
+      <!-- End - mobile nav menu -->
+      <!-- mobile nav call here -->
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div id="mobile-nav" class="hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-50"></div>
+        <div
+          class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+        >
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Mental Health Clinic of Idaho</span>
+              <Logo />
+            </a>
+            <button id="close-button" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Close menu</span>
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+                {
+                  main.map((item: any) => (
+                    <a
+                      href={item.url}
+                      class="-mx-3 flex items-center gap-x-1 rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      {item.name}
+                      {item.hasChildren && (
+                        <svg
+                          class="h-5 w-5 flex-none text-gray-400"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      )}
+                    </a>
+                    <Fragment>{
+                item.hasChildren && (
+                  <div class=" -left-8 top-full mt-1 w-screen max-w-xs overflow-hidden rounded-md bg-white shadow-xs ring-1 ring-gray-900/10 ">
+                    <div class="p-2">
+                      {item.children.map((item: any) => (
+                        <div class="rounded-lg p-3 text-sm leading-6 hover:bg-gray-50">
 
+                          <div class="flex-auto">
+                            <a href={item.url} class="block font-semibold text-gray-900">
+                              {item.name}
+
+                            </a>
+
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )
+              }</Fragment>
+
+                  ))
+                }
+              </div>
+
+              <div class="py-6">
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Make Appointment</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of mobile nav call here -->
+    </div>
+  </div>
+  <!-- menu starts here -->
+  <div class="hidden lg:block py-2 shadow-sm divide-x-2 divide-blue-900">
+    <nav
+      class="flex items-center justify-between container mx-auto max-w-screen-xl px-4 md:px-24 lg:px-8"
+      aria-label="Global"
+    >
       <div class="hidden lg:flex lg:gap-x-12">
         {main.map((item: any) => <Navchild {item} />)}
       </div>
@@ -92,60 +187,29 @@ const { main }: any = menu;
         >
       </div>
     </nav>
-
-    <!-- Mobile menu, show/hide based on menu open state. -->
-    <div class="lg:hidden" role="dialog" aria-modal="true">
-      <!-- Background backdrop, show/hide based on slide-over state. -->
-      <div class="fixed inset-0 z-50"></div>
-      <div
-        class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
-      >
-        <div class="flex items-center justify-between">
-          <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">Mental Health Clinic of Idaho</span>
-            <Logo />
-          </a>
-          <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-            <span class="sr-only">Close menu</span>
-            <svg
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
-        </div>
-        <div class="mt-6 flow-root">
-          <div class="-my-6 divide-y divide-gray-500/10">
-            <div class="space-y-2 py-6">
-              {
-                main.map((item: any) => (
-                  <a
-                    href={item.url}
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    {item.name}
-                  </a>
-                ))
-              }
-            </div>
-            <div class="py-6">
-              <a
-                href="#"
-                class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >Make Appointment</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </header>
+
+<script>
+  const mobileNavButton = document.getElementById("mobile-nav-button") as HTMLButtonElement;
+  const closeButton = document.getElementById("close-button") as HTMLButtonElement;
+  const mobileNav = document.getElementById("mobile-nav");
+
+  mobileNavButton.addEventListener("click", (e) => {
+    mobileNav.classList.toggle("hidden");
+  });
+
+  closeButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    mobileNav.classList.toggle("hidden");
+
+  });
+
+  // document.addEventListener("click", (e) => {
+  //   if (!mobileNavButton.contains(e.target) &&e.target !==mobileNav) {
+  //     mobileNav.classList.add("hidden");
+  //   }
+  // });
+
+
+</script>

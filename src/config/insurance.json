@@ -1,6 +1,10 @@
 {
   "insuranceList": [
     {
+      "name": "Optum",
+      "logo": "optum"
+    },
+    {
       "name": "aetna",
       "logo": "aetna"
     },
@@ -9,10 +13,7 @@
       "name": "Medic Aid",
       "logo": "medicaid"
     },
-    {
-      "name": "Optum",
-      "logo": "optum"
-    },
+
     {
       "name": "Pacific Source Health Plans",
       "logo": "pacificsource"
@@ -30,9 +31,12 @@
     {
       "name": "United Health Care",
       "logo": "unitedhealthcare"
-    }
-  ],
-  "removedList": [
+    },
+
+    {
+      "name": "Blue Cross of Idaho",
+      "logo": "bcrossidaho"
+    },
     {
       "name": "BlueCross BlueSheld",
       "logo": "bluecross"
@@ -40,10 +44,14 @@
     {
       "name": "Regence",
       "logo": "regence"
-    },
-    {
-      "name": "Blue Cross of Idaho",
-      "logo": "bcrossidaho"
     }
+  ],
+  "removedList": [
+
+    {
+      "name": "Regence",
+      "logo": "regence"
+    }
+
   ]
 }

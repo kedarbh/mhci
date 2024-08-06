@@ -2,7 +2,7 @@
   "main": [
     {
       "name": "About Us",
-      "url": "/about",
+      "url": "#",
       "hasChildren": true,
       "children": [
         {
@@ -13,7 +13,7 @@
     },
     {
       "name": "Get Care",
-      "url": "",
+      "url": "#",
       "hasChildren": true,
       "children": [
         {
@@ -46,18 +46,19 @@
         }
       ]
     },
+
     {
       "name": "All Locations",
-      "ulr": "/locations"
+      "url": "/locations"
     },
 
     {
       "name": "Testimonials",
-      "ulr": "/testimonials"
+      "url": "/testimonials"
     },
     {
       "name": "Blog",
-      "ulr": "/blog"
+      "url": "/blog"
     }
   ],
   "footerLinks": [
