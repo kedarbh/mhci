@@ -1,6 +1,6 @@
 ---
 import Logo from "@components/basic/Logo.astro";
-import menu from "@config/menu.json";
+import Menu from "@config/menu.json";
 import Navchild from "@components/basic/Navchild.astro";
 import { Icon } from "astro-icon/components";
 
@@ -16,7 +16,7 @@ export interface NavigationLink {
   children?: ChildNavigationLink[];
 }
 
-const  main : any = menu;
+const  {main} : any = Menu;
 
 
 ---
