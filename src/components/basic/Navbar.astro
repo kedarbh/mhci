@@ -18,7 +18,7 @@ export interface NavigationLink {
 
 const { main }: any = menu;
 
-// const { pathname } = Astro.url;
+
 ---
 
 <header class="top-0 z-50">
@@ -193,7 +193,7 @@ const { main }: any = menu;
 <script>
   const mobileNavButton = document.getElementById("mobile-nav-button") as HTMLButtonElement;
   const closeButton = document.getElementById("close-button") as HTMLButtonElement;
-  const mobileNav = document.getElementById("mobile-nav");
+  const mobileNav = document.getElementById("mobile-nav") as HTMLElement;
 
   mobileNavButton.addEventListener("click", (e) => {
     mobileNav.classList.toggle("hidden");
