@@ -16,7 +16,7 @@ export interface NavigationLink {
   children?: ChildNavigationLink[];
 }
 
-const { main }: any = menu;
+const  main : any = menu;
 
 
 ---
@@ -196,6 +196,7 @@ const { main }: any = menu;
   const mobileNav = document.getElementById("mobile-nav") as HTMLElement;
 
   mobileNavButton.addEventListener("click", (e) => {
+    e.preventDefault();
     mobileNav.classList.toggle("hidden");
   });
 
