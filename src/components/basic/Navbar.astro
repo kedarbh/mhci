@@ -171,7 +171,7 @@ const  {main} : any = Menu;
     </div>
   </div>
   <!-- menu starts here -->
-  <div class="hidden lg:block py-2 shadow-sm divide-x-2 divide-blue-900">
+  <div class="lg:block py-2 shadow-sm divide-x-2 divide-blue-900">
     <nav
       class="flex items-center justify-between container mx-auto max-w-screen-xl px-4 md:px-24 lg:px-8"
       aria-label="Global"
@@ -187,6 +187,29 @@ const  {main} : any = Menu;
         >
       </div>
     </nav>
+    <!-- three main links -->
+    <div class="flex justify-between space-x-4 container max-w-screen-xl px-4 md:px-24 content-center">
+      <div class="lg:hidden flex flex-col space-y-1 items-center text-center">
+        <Icon name="call" class="h-8 w-8 text-sky-500" />
+        <div>
+          <p class="text-xs font-thin">Call for an appointment</p>
+          <p>208-506-3618</p>
+        </div>
+      </div>
+      <div class="lg:hidden flex flex-col space-y-1 items-center text-center">
+        <Icon name="appointment-1" class="h-8 w-8 text-sky-500" />
+        <div>
+          <p class="text-xs font-thin">Make an <br />Appointment Online</p>
+        </div>
+      </div>
+      <div class="lg:hidden flex flex-col space-y-1 items-center text-center">
+        <Icon name="patient-portal" class="h-8 w-8 text-sky-500" />
+        <div>
+          <p class="text-xs font-thin">Patient <br />Portal</p>
+        </div>
+      </div>
+    </div>
+    <!-- three main links -->
   </div>
 </header>
 
